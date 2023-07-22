@@ -35,16 +35,19 @@ def stuff():
         # get url from poster container style
         poster_url = poster_container["style"]
         poster_url = poster_url.split("(")[1].split(")")[0].replace('"', '')
-        print(poster_url)
-        print(titles[i].text)
-        print("=" * 50)
-
+        
         # scraper.send_message(chat_id='@linkupposters', text=titles[i])
 
         
-        scraper.send_photo(chat_id='@linkupposters', photo=poster_url , caption=titles[i])
-        scraper.send_photo(chat_id=467630144, photo=poster_url , caption=titles[i])
-        # time.sleep(3)
+        if  month in titles[i].text:
+
+                # scraper.send_message(chat_id='@linkupposters', text=titles[i])
+                print(poster_url)
+                print(titles[i].text)
+                print("=" * 50)
+
+                scraper.send_photo(chat_id='@linkupposters', photo=poster_url , caption=titles[i])
+                break
       
         
 
