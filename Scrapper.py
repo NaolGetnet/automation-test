@@ -51,7 +51,7 @@ def stuff():
 
         
         
-while True:
+# while True:
     
-    stuff()
-    time.sleep(3)
+stuff()
+    # time.sleep(3)
