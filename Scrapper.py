@@ -1,12 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
-from selenium import webdriver
+# from selenium import webdriver
 import telebot
-import time
+# import time
 
 
 
-driver = webdriver.Edge()
+# driver = webdriver.Edge()
 
 token = '6388955939:AAFrszEHJpfDMZfJyn2i0xU_vNPGT-_lEFk'
 botusername = '@scrapwebass_bot'
