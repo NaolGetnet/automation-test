@@ -2,6 +2,21 @@ import requests
 from bs4 import BeautifulSoup
 # from selenium import webdriver
 import telebot
+import datetime
+
+
+# driver = webdriver.Edge()
+
+token = '6388955939:AAFrszEHJpfDMZfJyn2i0xU_vNPGT-_lEFk'
+botusername = '@scrapwebass_bot'
+
+scraper = telebot.TeleBot(token=token)
+
+
+import requests
+from bs4 import BeautifulSoup
+# from selenium import webdriver
+import telebot
 # import time
 
 
@@ -14,17 +29,16 @@ botusername = '@scrapwebass_bot'
 scraper = telebot.TeleBot(token=token)
 
 url = 'https://linkupaddis.com/publications/'
-    response = requests.get(url)
-    content = response.content
+response = requests.get(url)
+content = response.content
 
     # store the current month on a variable
 
-    month = str((datetime.date.today().strftime("%B")))
-    print (month)
+month = str((datetime.date.today().strftime("%B")))
+print (month)
 
 
-
-    def stuff():
+def stuff():
         soup = BeautifulSoup(content, "html.parser")
         posters = soup.find_all("div", class_="v-image v-responsive v-carousel__item theme--dark")
         titles = soup.find_all("div", class_="v-list-item__content")
@@ -61,5 +75,5 @@ url = 'https://linkupaddis.com/publications/'
 
     # while True:
 
-    stuff()
+stuff()
         # time.sleep(3)
