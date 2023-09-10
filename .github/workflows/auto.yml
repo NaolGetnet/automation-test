@@ -1,32 +1,32 @@
 
-# name: Periodic Python Script
+name: Periodic Python Script
 
-# on:
-#   schedule:
-#     - cron: "*/5 * * * 0"
+on:
+  schedule:
+    - cron: "0 3 * * 0"
     
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
 
-#       - name: checkout repo content
-#         uses: actions/checkout@v2 # checkout the repository content to github runner
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner
 
-#       - name: setup python
-#         uses: actions/setup-python@v4
-#         with:
-#           python-version: '3.9' # install the python version needed
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9' # install the python version needed
           
-#       - name: install python packages
-#         run: |
-#           python -m pip install --upgrade pip
-#           pip install -r req.txt
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r req.txt
           
-#       - name: execute py script # run main.py
+      - name: execute py script # run main.py
      
   
-#         run: python Scrapper.py
+        run: python Scrapper.py
           
       
