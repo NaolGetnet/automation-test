@@ -3,7 +3,7 @@ name: Periodic Python Script
 
 on:
   schedule:
-    - cron: "*/5 * * * 0" 
+    - cron: "0 3 * * 0" 
     
 
 jobs:
